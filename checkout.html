@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout | Altametrics</title>
+  <meta name="description" content="Review your order and pay securely.">
+  <meta name="theme-color" content="#0b1d3a">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap">
+  <link rel="preconnect" href="https://altametrics.com">
+  <link rel="preconnect" href="https://agcdn.altametrics.com">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body class="page-checkout" data-page="checkout">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="co-header">
+    <div class="container co-header__inner">
+      <a class="wordmark" href="index.html" aria-label="Altametrics home"><span class="wordmark__text">Altametrics</span></a>
+      <ol class="stepper" aria-label="Checkout progress"><li class="stepper__item" data-step="1" data-state="done"><span class="stepper__dot" aria-hidden="true"><span class="stepper__num">1</span><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><a class="stepper__label" href="products.html">Choose apps</a><span class="sr-only"> (completed)</span></li><li class="stepper__item" data-step="2" data-state="done"><span class="stepper__dot" aria-hidden="true"><span class="stepper__num">2</span><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span class="stepper__label">Create account</span><span class="sr-only"> (completed)</span></li><li class="stepper__item" data-step="3" data-state="done"><span class="stepper__dot" aria-hidden="true"><span class="stepper__num">3</span><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span class="stepper__label">Verify email</span><span class="sr-only"> (completed)</span></li><li class="stepper__item" data-step="4" data-state="current" aria-current="step"><span class="stepper__dot" aria-hidden="true"><span class="stepper__num">4</span><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span class="stepper__label">Payment</span><span class="sr-only"> (current step)</span></li></ol>
+      <p class="co-header__help"><span class="co-header__help-label">Need help?</span>
+        <a href="tel:+18006761281" aria-label="Call support at (800) 676-1281"><svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.18 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="co-header__phone">(800) 676-1281</span></a></p>
+    </div>
+  </header>
+
+  <main class="checkout-main" id="main">
+    <h1 class="page-title">Checkout</h1>
+    <p class="page-lead">Review your order, then add a payment method to finish.</p>
+
+    <div class="checkout-grid">
+      <div>
+        <!-- Account -->
+        <section class="panel" aria-labelledby="account-title">
+          <h2 class="sr-only" id="account-title">Account</h2>
+          <div class="account-row">
+            <span class="account-row__avatar" id="acct-initials" aria-hidden="true">&mdash;</span>
+            <div>
+              <p class="account-row__name" id="acct-name">Your account</p>
+              <p class="account-row__meta" id="acct-meta">Email verified</p>
+            </div>
+            <span class="account-row__check"><svg class="icon icon--xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Verified</span>
+          </div>
+        </section>
+
+        <!-- Payment method -->
+        <section class="panel" aria-labelledby="pay-title">
+          <h2 class="panel__title" id="pay-title">Payment Method</h2>
+          <p class="panel__sub">How would you like to pay?</p>
+          <form id="checkout-form" novalidate>
+            <fieldset class="method-list">
+              <legend class="sr-only">Payment method</legend>
+              <label class="method-tile">
+                <input type="radio" name="method" value="card" checked>
+                <span class="method-tile__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg></span>
+                <span><span class="method-tile__title">Credit Card</span><span class="method-tile__sub">Visa, Mastercard, American Express, Discover</span></span>
+              </label>
+              <!-- Add a second .method-tile for Bank Account (ACH) if Forte eCheck is enabled -->
+            </fieldset>
+
+            <div class="field field--spaced">
+              <label class="field__label" for="discount-code">Discount code <span class="field__opt">(optional)</span></label>
+              <div class="discount-row">
+                <input class="input" id="discount-code" name="discount" type="text" placeholder="Enter code" autocomplete="off" aria-describedby="discount-code-error discount-applied">
+                <button type="button" class="btn btn--outline-primary" id="apply-discount">Apply</button>
+              </div>
+              <p class="field__error" id="discount-code-error" hidden></p>
+              <p class="discount-applied" id="discount-applied" role="status" hidden></p>
+            </div>
+
+            <div class="checkout-cta">
+              <button type="submit" class="btn btn--primary btn--block" id="place-order">Place Order</button>
+              <p class="secure-note"><svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Encrypted and processed securely by CSG Forte.</p>
+            </div>
+          </form>
+        </section>
+      </div>
+
+      <!-- Order summary -->
+      <aside class="checkout-aside">
+        <section class="panel" aria-labelledby="order-title">
+          <div class="order-summary__head">
+            <h2 class="panel__title" id="order-title">Your order</h2>
+            <a class="link-btn" href="products.html">Edit</a>
+          </div>
+          <p class="your-order__empty" id="order-empty" hidden>Your cart is empty. <a class="link-btn" href="products.html">Browse apps and hardware</a></p>
+          <ul class="summary-list" id="order-items"></ul>
+          <dl class="totals">
+            <div class="totals__row"><dt>Apps</dt><dd id="order-subtotal">$0.00/mo</dd></div>
+            <div class="totals__row" id="order-hw-row" hidden><dt>Hardware (one-time)</dt><dd id="order-hardware">$0.00</dd></div>
+            <div class="totals__row totals__row--discount" id="order-discount-row" hidden><dt>Discount</dt><dd id="order-discount">- $0.00</dd></div>
+          </dl>
+          <div class="order-summary__due">
+            <span class="order-summary__due-label">Total<span class="order-summary__due-sub" id="order-total-sub">Due today, then monthly</span></span>
+            <span class="order-summary__due-value" id="order-total">$0.00</span>
+          </div>
+        </section>
+        <section class="panel trust-panel" aria-label="Why restaurants choose Altametrics">
+          <p class="trust-panel__title">Trusted by 100,000+ restaurant professionals</p>
+          <ul class="logo-row logo-row--sm" aria-label="Customers"><li><img src="https://altametrics.com/assets/images/pages/steak-n-shake-133-1b79178c5.png" alt="Steak n Shake" height="28" loading="lazy" decoding="async"></li><li><img src="https://altametrics.com/assets/images/pages/outback-steakhouse-260-2e56b673c.png" alt="Outback Steakhouse" height="28" loading="lazy" decoding="async"></li><li><img src="https://altametrics.com/assets/images/pages/five-guys-burgers-344-172559652.png" alt="Five Guys" height="28" loading="lazy" decoding="async"></li><li><img src="https://altametrics.com/assets/images/pages/chipotle_mexican_grill_marquee-256-46bb51e86.png" alt="Chipotle Mexican Grill" height="28" loading="lazy" decoding="async"></li></ul>
+          <ul class="trust-panel__list">
+            <li><svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Payments encrypted and processed by CSG Forte</li>
+            <li><svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.18 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Human support 24/7 at <a href="tel:+18006761281">(800) 676-1281</a></li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="co-footer">
+    <div class="container co-footer__inner">
+      <p>&copy; 2026 Altametrics. All rights reserved.</p>
+      <nav class="co-footer__links" aria-label="Legal">
+        <a href="https://altametrics.com/legal/terms-of-use/">Terms of Use</a>
+        <a href="https://altametrics.com/legal/privacy-policy/">Privacy Policy</a>
+        <a href="https://altametrics.com/legal/refunds/">Sales and Refunds</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- ===== Step 1: Payment details =====
+       PRODUCTION: render the card inputs with CSG Forte hosted fields / Forte Checkout so
+       raw card data never reaches your servers (avoids PCI DSS SAQ D scope). -->
+  <dialog class="dialog" id="payment-dialog" aria-labelledby="payment-title">
+    <div class="dialog__header">
+      <div class="dialog__title-row">
+        <div><h2 class="dialog__title" id="payment-title">Payment Details</h2><p class="dialog__sub">Step 1 of 3</p></div>
+        <button type="button" class="dialog__close" data-close-dialog aria-label="Close"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+      </div>
+      <div class="dialog__progress" aria-hidden="true"><span class="is-on"></span><span class=""></span><span class=""></span></div>
+    </div>
+    <form class="dialog__body" id="payment-form" novalidate>
+      <label class="pay-option"><input type="radio" name="pay-type" value="card" checked><span class="pay-option__title">Credit or debit card</span><span class="brand-chips" data-brand-chips aria-label="Accepted cards: Visa, Mastercard, American Express, Discover"><span class="brand-chip" data-brand="visa">VISA</span><span class="brand-chip" data-brand="mastercard">MC</span><span class="brand-chip" data-brand="amex">AMEX</span><span class="brand-chip" data-brand="discover">DISC</span></span></label>
+      <div class="pay-fields">
+
+          <div class="field">
+            <label class="field__label" for="card-number">Card number</label>
+            <div class="input-wrap input-wrap--icon-left card-number-wrap"><svg class="input-wrap__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><input class="input" id="card-number" name="cardnumber" type="text" inputmode="numeric" autocomplete="cc-number" placeholder="0000 0000 0000 0000" maxlength="23" aria-describedby="card-number-error"><span class="input-wrap__tag" id="card-brand-tag" aria-live="polite"></span></div>
+            <p class="field__error" id="card-number-error" hidden></p>
+          </div>
+        <div class="field-row">
+
+          <div class="field">
+            <label class="field__label" for="card-exp">Exp date (MM/YY)</label>
+            <input class="input" id="card-exp" name="exp-date" type="text" inputmode="numeric" autocomplete="cc-exp" placeholder="MM / YY" maxlength="7" aria-describedby="card-exp-error">
+            <p class="field__error" id="card-exp-error" hidden></p>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="card-cvc">Security code</label>
+            <input class="input" id="card-cvc" name="cvc" type="text" inputmode="numeric" autocomplete="cc-csc" placeholder="CVV" maxlength="4" aria-describedby="card-cvc-hint card-cvc-error"><p class="field__hint" id="card-cvc-hint">3 digits on the back. Amex: 4 on the front.</p>
+            <p class="field__error" id="card-cvc-error" hidden></p>
+          </div>
+        </div>
+      </div>
+      <div class="dialog__actions">
+        <button type="submit" class="btn btn--primary btn--lg btn--block">Next</button>
+        <button type="button" class="link-btn" data-close-dialog>Cancel</button>
+      </div>
+      <p class="secure-note dialog__footer-note"><svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Secured by CSG Forte. Your card details are encrypted.</p>
+    </form>
+  </dialog>
+
+  <!-- ===== Step 2: Billing information ===== -->
+  <dialog class="dialog" id="billing-dialog" aria-labelledby="billing-title">
+    <div class="dialog__header">
+      <div class="dialog__title-row">
+        <div><h2 class="dialog__title" id="billing-title">Billing Information</h2><p class="dialog__sub">Step 2 of 3</p></div>
+        <button type="button" class="dialog__close" data-close-dialog aria-label="Close"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+      </div>
+      <div class="dialog__progress" aria-hidden="true"><span class="is-on"></span><span class="is-on"></span><span class=""></span></div>
+    </div>
+    <form class="dialog__body" id="billing-form" novalidate>
+
+          <div class="field">
+            <label class="field__label" for="bill-name">Full name</label>
+            <input class="input" id="bill-name" type="text" autocomplete="cc-name" placeholder="Name on card" aria-describedby="bill-name-error">
+            <p class="field__error" id="bill-name-error" hidden></p>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="bill-address1">Address line 1</label>
+            <input class="input" id="bill-address1" type="text" autocomplete="address-line1" placeholder="Street address" aria-describedby="bill-address1-error">
+            <p class="field__error" id="bill-address1-error" hidden></p>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="bill-address2">Address line 2 <span class="field__opt">(optional)</span></label>
+            <input class="input" id="bill-address2" type="text" autocomplete="address-line2" placeholder="Apt, suite, unit">
+            <p class="field__error" id="bill-address2-error" hidden></p>
+          </div>
+      <div class="field-row field-row--3">
+
+          <div class="field">
+            <label class="field__label" for="bill-city">City</label>
+            <input class="input" id="bill-city" type="text" autocomplete="address-level2" placeholder="City" aria-describedby="bill-city-error">
+            <p class="field__error" id="bill-city-error" hidden></p>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="bill-state">State</label>
+            <div class="select-wrap"><select class="select" id="bill-state" autocomplete="address-level1" aria-describedby="bill-state-error"><option value="">Select</option></select><svg class="select-wrap__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></div>
+            <p class="field__error" id="bill-state-error" hidden></p>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="bill-postal">Postal code</label>
+            <input class="input" id="bill-postal" type="text" inputmode="numeric" autocomplete="postal-code" placeholder="ZIP" maxlength="10" aria-describedby="bill-postal-error">
+            <p class="field__error" id="bill-postal-error" hidden></p>
+          </div>
+      </div>
+      <div class="field-row">
+
+          <div class="field">
+            <label class="field__label" for="bill-phone">Phone number <span class="field__opt">(optional)</span></label>
+            <input class="input" id="bill-phone" type="tel" autocomplete="tel-national" placeholder="000-000-0000" aria-describedby="bill-phone-error">
+            <p class="field__error" id="bill-phone-error" hidden></p>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="bill-email">Email address</label>
+            <input class="input" id="bill-email" type="email" autocomplete="email" placeholder="name@company.com" aria-describedby="bill-email-error">
+            <p class="field__error" id="bill-email-error" hidden></p>
+          </div>
+      </div>
+      <div class="dialog__actions">
+        <button type="submit" class="btn btn--primary btn--lg btn--block">Next</button>
+        <button type="button" class="link-btn" data-close-dialog>Cancel</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- ===== Step 3: Review & pay ===== -->
+  <dialog class="dialog review-dialog" id="review-dialog" aria-labelledby="review-title">
+    <div class="dialog__header">
+      <div class="dialog__title-row">
+        <div><h2 class="dialog__title" id="review-title">Review and pay</h2><p class="dialog__sub">Step 3 of 3</p></div>
+        <button type="button" class="dialog__close" data-close-dialog aria-label="Close"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+      </div>
+      <div class="dialog__progress" aria-hidden="true"><span class="is-on"></span><span class="is-on"></span><span class="is-on"></span></div>
+    </div>
+    <div class="dialog__body">
+      <p class="review-merchant"><svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Paying <strong id="review-merchant">Altametrics LLC</strong></span></p>
+
+      <section class="review-section" aria-labelledby="rv-pay">
+        <div class="review-section__head">
+          <h3 class="review-section__label" id="rv-pay">Payment information</h3>
+          <button type="button" class="review-section__edit" id="edit-payment">Edit</button>
+        </div>
+        <div class="review-card"><span class="brand-chip is-active" id="review-brand">VISA</span><p class="review-lines" id="review-pay-lines"></p></div>
+      </section>
+      <section class="review-section" aria-labelledby="rv-bill">
+        <div class="review-section__head">
+          <h3 class="review-section__label" id="rv-bill">Billing information</h3>
+          <button type="button" class="review-section__edit" id="edit-billing">Edit</button>
+        </div>
+        <p class="review-lines" id="review-bill-lines"></p>
+      </section>
+
+      <section class="amount-summary" aria-labelledby="rv-amount">
+        <h3 class="amount-summary__head" id="rv-amount">Amount summary</h3>
+        <dl class="amount-summary__rows" id="review-rows"></dl>
+        <dl class="amount-summary__total"><dt>Total Amount</dt><dd id="review-total">$0.00</dd></dl>
+      </section>
+
+      <!-- CONTENT: confirm authorization wording with legal/Forte — items are recurring monthly charges -->
+      <p class="review-auth">I authorize CSG Forte to initiate a one-time electronic payment from my listed account in the amount specified above.</p>
+      <p class="pay-error" id="pay-error" role="alert" hidden></p>
+
+      <div class="dialog__actions">
+        <button type="button" class="btn btn--success btn--lg btn--block" id="pay-btn"><svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span id="pay-btn-label">Pay</span></button>
+        <button type="button" class="link-btn" data-close-dialog>Cancel</button>
+      </div>
+      <p class="review-legal">This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a> and <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Terms of Service</a> apply.</p>
+    </div>
+  </dialog>
+
+  <!-- ===== Result ===== -->
+  <dialog class="dialog result-dialog" id="message-dialog" aria-labelledby="message-title" aria-describedby="message-text" data-static>
+    <div class="result-dialog__body">
+      <span class="result-dialog__icon" aria-hidden="true"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+      <h2 class="result-dialog__title" id="message-title">Payment successful</h2>
+      <p class="result-dialog__text" id="message-text">You&rsquo;re subscribed. Configure your apps, or ask your manager to configure them.</p>
+      <p class="result-dialog__meta" id="message-meta"></p>
+      <button type="button" class="btn btn--primary btn--lg btn--block" id="message-ok">Go to My Apps</button>
+    </div>
+  </dialog>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manage ZipSchedules | My Apps</title>
+  <meta name="description" content="Manage your app subscription.">
+  <meta name="theme-color" content="#0b1d3a">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap">
+  <link rel="preconnect" href="https://altametrics.com">
+  <link rel="preconnect" href="https://agcdn.altametrics.com">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body class="page-manage" data-page="manage">
+  <header class="app-bar">
+    <div class="app-bar__inner">
+      <div class="app-bar__left">
+        <a class="wordmark wordmark--light" href="#" aria-label="Altametrics home"><span class="wordmark__text">Altametrics</span><span class="wordmark__sub">Growth</span></a>
+        <span class="app-bar__title">My Apps</span>
+      </div>
+      <div class="app-bar__actions">
+        <a class="app-bar__icon-btn" href="#" aria-label="Notifications"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0"/></svg></a>
+        <a class="app-bar__icon-btn" href="#" aria-label="Help"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h.01"/></svg></a>
+        <a class="app-bar__icon-btn" href="#" aria-label="Account"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="10" r="3"/><path d="M7 20.66V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.66"/></svg></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="manage-main">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="#">Manage Account</a><svg class="icon icon--xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></li>
+        <li><a href="#">Billing &amp; Subscription</a><svg class="icon icon--xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></li>
+        <li><a href="#">Apps</a><svg class="icon icon--xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></li>
+        <li><span aria-current="page" data-app-name>ZipSchedules</span></li>
+      </ol>
+    </nav>
+
+    <div class="manage-head">
+      <div>
+        <h1 class="manage-title">Manage <span data-app-name>ZipSchedules</span></h1>
+        <p class="manage-note">All app prices are in US dollars.</p>
+      </div>
+      <a class="btn btn--ghost btn--sm" href="#"><svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>Close</a><!-- TODO: return URL (My Apps) -->
+    </div>
+
+    <section class="sub-card" aria-labelledby="plan-app">
+      <div class="sub-card__main">
+        <img class="sub-card__icon" id="plan-icon" src="https://agcdn.altametrics.com/releaseHubWorks/agassets/v3/assets/images/common/zipSchedule.png" alt="" width="64" height="64">
+        <div>
+          <div class="sub-card__name-row">
+            <h2 class="sub-card__name" id="plan-app" data-app-name>ZipSchedules</h2>
+            <span class="status-pill status-pill--active" id="plan-status">Active</span>
+          </div>
+          <p class="sub-card__plan">Professional plan</p>
+        </div>
+        <div class="sub-card__price">
+          <p class="sub-card__amount">$<span id="plan-price">19.99</span></p>
+          <p class="sub-card__per">per month</p>
+        </div>
+      </div>
+      <div class="sub-card__footer">
+        <p class="sub-card__footer-text" id="plan-footer-text">Billed monthly to your card on file.</p>
+        <div class="sub-card__footer-actions">
+          <button type="button" class="btn btn--danger-outline btn--sm" id="unsubscribe">Unsubscribe</button>
+          <a class="btn btn--primary btn--sm" id="resubscribe" href="products.html" hidden>Subscribe again</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="xsell" aria-labelledby="xsell-title">
+      <div class="xsell__head">
+        <h2 class="xsell__title" id="xsell-title">Get more from Altametrics</h2>
+        <a class="link-btn" href="products.html">Browse all apps</a>
+      </div>
+      <div class="xsell__grid">
+        <article class="xsell-card">
+          <figure class="media media--card" data-media data-label="AI forecasting dashboard projecting sales and labor"><img src="https://altametrics.com/assets/images/pages/drive_rofitability_with_ai-826-6848e2af0.png" alt="AI forecasting dashboard projecting sales and labor" width="826" loading="lazy" decoding="async"></figure>
+          <div class="xsell-card__body">
+            <h3 class="xsell-card__title">AI Forecasting</h3>
+            <p class="xsell-card__text">Forecast demand from sales history, local events and weather, then plan labor and inventory around it.</p>
+            <a class="link-btn" href="https://altametrics.com/restaurant-forecasting-software.html">Learn more<span class="sr-only"> about AI Forecasting</span> <svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </article>
+        <article class="xsell-card">
+          <figure class="media media--card" data-media data-label="Automated food safety and HACCP compliance on a mobile device"><img src="https://altametrics.com/assets/images/pages/automated_food_safety_and_haccp-822-875ec1f95.png" alt="Automated food safety and HACCP compliance on a mobile device" width="826" loading="lazy" decoding="async"></figure>
+          <div class="xsell-card__body">
+            <h3 class="xsell-card__title">Food Safety &amp; Checklists</h3>
+            <p class="xsell-card__text">Digital temperature logs, daily operational checklists and real-time alerts before violations happen.</p>
+            <a class="link-btn" href="https://altametrics.com/restaurant-checklist.html">Learn more<span class="sr-only"> about Food Safety &amp; Checklists</span> <svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </article>
+        <article class="xsell-card">
+          <figure class="media media--card" data-media data-label="Enterprise reporting across multiple restaurant locations"><img src="https://altametrics.com/assets/images/pages/enterprise_scale-826-4c55569bd.png" alt="Enterprise reporting across multiple restaurant locations" width="826" loading="lazy" decoding="async"></figure>
+          <div class="xsell-card__body">
+            <h3 class="xsell-card__title">Enterprise Reporting</h3>
+            <p class="xsell-card__text">Central visibility, standardized reporting and benchmarks across every location.</p>
+            <a class="link-btn" href="https://altametrics.com/restaurant-enterprise.html">Learn more<span class="sr-only"> about Enterprise Reporting</span> <svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="manage-footer">
+    <div class="manage-footer__inner">
+      <p>&copy; 2026 Altametrics. All rights reserved.</p>
+      <p><a href="https://altametrics.com/legal/terms-of-use/">Terms of Use</a> &nbsp; <a href="https://altametrics.com/legal/privacy-policy/">Privacy Policy</a></p>
+    </div>
+  </footer>
+
+  <!-- Confirm unsubscribe -->
+  <dialog class="dialog result-dialog" id="confirm-dialog" aria-labelledby="confirm-title" aria-describedby="confirm-text">
+    <div class="result-dialog__body">
+      <span class="result-dialog__icon result-dialog__icon--neutral" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg></span>
+      <h2 class="result-dialog__title" id="confirm-title">Unsubscribe from <span data-app-name>ZipSchedules</span>?</h2>
+      <p class="result-dialog__text" id="confirm-text">Your team will lose access to <span data-app-name>ZipSchedules</span> when the subscription ends.</p>
+      <div class="confirm-dialog__actions">
+        <button type="button" class="btn btn--ghost btn--lg" data-close-dialog>Keep subscription</button>
+        <button type="button" class="btn btn--danger btn--lg" id="confirm-unsubscribe">Unsubscribe</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Result -->
+  <dialog class="dialog result-dialog" id="message-dialog" aria-labelledby="message-title" data-static>
+    <div class="result-dialog__body">
+      <span class="result-dialog__icon result-dialog__icon--neutral" aria-hidden="true"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+      <h2 class="result-dialog__title" id="message-title">Subscription cancelled</h2>
+      <p class="result-dialog__text">You&rsquo;ve unsubscribed from <strong data-app-name>ZipSchedules</strong>. You can subscribe again at any time.</p>
+      <button type="button" class="btn btn--primary btn--lg btn--block" id="message-ok">Done</button>
+    </div>
+  </dialog>
+</body>
+</html>
